@@ -1,0 +1,113 @@
+1. Add new cars - POST
+
+url: https://rest-api-whitepanda.herokuapp.com/cars
+Body: (JSON) 
+{
+	"city":"Hola",
+	"rent": 500,
+	"number": "AV-1617",
+	"model":"Fuma Fu",
+	"capacity":8
+	
+}
+
+Headers: 
+	Content-type : application/json
+	Authorization : Bearer <jsonwebtoken>
+
+2. Get all cars - GET
+
+url: https://rest-api-whitepanda.herokuapp.com/cars
+
+3. Get cars by model - GET
+
+url : https://rest-api-whitepanda.herokuapp.com/cars/model?model=<model>
+
+4. Book a car by vehicle number - POST
+
+url : https://rest-api-whitepanda.herokuapp.com/book
+
+Body: (JSON)
+{
+	"number": "AV-7888",
+	"mobile":"8989898339",
+	"issue_date":"09/03/2019",
+	"return_date":"09/05/2019"
+}
+
+Headers: 
+	Content-type : application/json
+	Authorization : Bearer <jsonwebtoken>
+
+5. Delete a car - DELETE
+
+url : https://rest-api-whitepanda.herokuapp.com/cars?number=<vehicle-number>
+
+Headers: 
+	Content-type : application/json
+	Authorization : Bearer <jsonwebtoken>
+
+
+6. Filter cars - GET
+
+	a. Filter by Date
+		url: https://rest-api-whitepanda.herokuapp.com/date
+		Body : {
+			"date":<date>
+			}
+	b. Filter by Rent
+		url: https://rest-api-whitepanda.herokuapp.com/date
+		Body : {
+			"rent":<rent>
+			}
+	c. Filter by Seating Capacity
+		url: https://rest-api-whitepanda.herokuapp.com/seats
+		Body : {
+			"seats":<seats>
+			}
+	d. Filter by city
+		url: https://rest-api-whitepanda.herokuapp.com/city
+		Body : {
+			"city": city
+			}
+
+7. Update a car - PUT
+
+url : https://rest-api-whitepanda.herokuapp.com/cars?number=<vehicle-number>
+
+Body: 
+{
+	"number": "AV-2222",
+	"city": "Delhi",
+	"rent": 1000,
+	"model":"Huhhha",
+	"booked": true
+}
+
+Headers: 
+	Content-type : application/json
+	Authorization : Bearer <jsonwebtoken>
+
+
+8. Create a user - POST
+
+url : https://rest-api-whitepanda.herokuapp.com/customer
+
+Body : 
+{
+	"mobile":8989898989,
+	"name":"Pratik"
+}
+
+Headers: 
+	Content-type : application/json
+	Authorization : Bearer <jsonwebtoken>
+
+
+9. Sign in for user
+
+url: https://rest-api-whitepanda.herokuapp.com/login
+Body:
+{
+	"mobile":8989898989
+}
