@@ -1,4 +1,4 @@
-# WhitePanda_Task_API
+# Node_js RESTful API's
  Creating REST API's using MongoDB, Express and Node<br><br><br>
  MongoDB has been hosted on mlab.<br>
  API's have been hosted on Heroku.<br>
